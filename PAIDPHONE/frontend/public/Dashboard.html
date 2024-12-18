@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../src/styles/dashboard.css">
+    <link rel="stylesheet" href="../src/styles/popup-style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Tabs -->
+        <div class="sidebar">
+            <button class="tab-button active" id="dashboard-tab">Dashboard</button>
+            <button class="tab-button" id="pos-tab">Point of Sale</button>
+            <button class="tab-button" id="admin-tab">Admin Settings</button>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Top Summary Section -->
+            <div class="top-summary">
+                <p>Total Points of Sale: <span id="total-pos">0</span></p>
+                <p>Global Balance Summary: <span id="global-balance">$0.00</span></p>
+                <p>Active Modules: <span id="active-modules">0</span></p>
+                <p>Inactive Modules: <span id="inactive-modules">0</span></p>
+                <p>Recent Logs: <span id="recent-logs">No logs available</span></p>
+            </div>
+
+            <!-- Search Bar Section -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search...">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="search-mode" value="id"> Point of Sale ID</label>
+                    <label><input type="checkbox" name="search-mode" value="name"> Point of Sale Name</label>
+                    <label><input type="checkbox" name="search-mode" value="manager-name"> Manager's Name</label>
+                    <label><input type="checkbox" name="search-mode" value="manager-phone"> Manager's Phone</label>
+                    <label><input type="checkbox" name="search-mode" value="balance"> Current Balance</label>
+                    <label><input type="checkbox" name="search-mode" value="card-id"> Master Card ID</label>
+                </div>
+                <ul class="autocomplete-suggestions" id="suggestions"></ul>
+            </div>
+
+            <!-- Pop-up Window for Search Results -->
+            <div class="search-popup" id="search-popup" hidden>
+                <div class="popup-content">
+                    <span class="close-popup" id="close-popup">&times;</span>
+                    <div id="popup-details">No results to display</div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="bottom-section">
+                <div class="random-info" id="random-info">
+                    <p>Random Point of Sale Information will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modify Admin Popup -->
+    <div id="modify-popup" class="popup" hidden>
+        <!-- Modify Admin Popup dinamically show here -->
+    </div>
+
+    <!-- Add Admin Popup -->
+    <div id="add-popup" class="popup" hidden>
+        <!-- Add Admin Popup dinamically show here -->
+    </div>
+
+
+    <!-- Delete Confirmation Popup -->
+    <div id="delete-popup" class="popup" hidden>
+        <!-- Delete Confirmation Popup dinamically show here -->
+    </div>
+
+    <script src="../src/pages/DashBoardPage.js"></script>
+</body>
+</html>

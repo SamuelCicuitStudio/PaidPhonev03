@@ -1,0 +1,61 @@
+/* Popup Styling for Modify, Delete, and Add Admin Popups */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific Styling for Modify, Delete, and Add Popups */
+#modify-popup, #delete-popup, #add-popup {
+    width: 300px;
+}
+
+.popup h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.popup input, .popup select {
+    width: 100%; /* Full width for input and select fields */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center; /* Centers text inside the input and select fields */
+}
+
+.popup button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+
+
+/* Popup Cancel Button Styling */
+.popup .cancel-btn {
+    padding: 10px 15px;
+    margin: 5px 0;
+    background-color: #f44336; /* Red background for Cancel */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup .cancel-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
